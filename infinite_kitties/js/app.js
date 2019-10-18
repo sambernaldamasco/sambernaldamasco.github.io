@@ -19,7 +19,7 @@ $(() => {
 
 
             //get url for the src on iframe
-            // console.log(data.data[0].embed_url);
+            console.log(data.data[0].embed_url);
             const $url = data.data[0].embed_url;
 
             //height and width for the iframe attr
