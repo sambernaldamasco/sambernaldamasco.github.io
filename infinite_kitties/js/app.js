@@ -3,9 +3,9 @@
 
 
 $(() => {
-
     const $gifsContainer = $('.carousel-gifs')
-
+    let currentIndex = 0;
+    let highestIndex = 0;
     $('.gifButton').on('click', (event) => {
         $gifsContainer.empty();
         const randomIndex = Math.floor(Math.random() * 1000);
@@ -42,37 +42,27 @@ $(() => {
                     //appending to the body
                     $gifsContainer.append($gif);
                 }
-                //get url for the src on iframe
-                // console.log(data.data[0].embed_url);
-                // const $url = data.data[0].embed_url;
-                //
-                // //height and width for the iframe attr
-                // // console.log(data.data[0].images.original.height);
-                // const $height = data.data[0].images.original.height;
-                //
-                // // console.log(data.data[0].images.original.width);
-                // const $width = data.data[0].images.original.width;
-                //
-                // //adding to the $gif variable
-                //
-                // $gif.attr('src', $url);
-                // $gif.attr('height', $height)
-                // $gif.attr('width', $width)
-                //
-                // //appending to the body
-                // $container.append($gif)
-
-
-
+                highestIndex = $('.carousel-gifs').children().length -1;
             },
             ()=>{
                 console.log('bad request');
             }
-        );
 
+        );//end of then method
     }) //end of on click handler
 
+    $('.next').on('click', () => {
 
+        $('.carousel-gifs').children().eq(currentIndex).css('display', 'none');
+
+        if (currentIndex < highestIndex){
+            currentIndex++
+        } else {
+            currentIndex = 0;
+        }
+
+        $('.carousel-gifs').children().eq(currentIndex).css('display', 'block');
+    })
 
 
 })

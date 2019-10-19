@@ -8,6 +8,12 @@
   align-items: center;
 }
 
+.carousel-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .carousel-gifs{
     width: 90%;
     padding: 10px;
@@ -23,4 +29,16 @@
 
 .carousel-gifs iframe:first-of-type{
     display: block;
+}
+
+.carousel-button{
+    align-self: center;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.carousel-button button{
+    border-radius: 50%;
 }
