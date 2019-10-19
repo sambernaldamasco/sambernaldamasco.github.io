@@ -7,3 +7,20 @@
   flex-direction: column;
   align-items: center;
 }
+
+.carousel-gifs{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-gifs iframe{
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.carousel-gifs iframe:first-of-type{
+    display: block;
+}
