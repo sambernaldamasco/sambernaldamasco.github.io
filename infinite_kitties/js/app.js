@@ -64,5 +64,18 @@ $(() => {
         $('.carousel-gifs').children().eq(currentIndex).css('display', 'block');
     })
 
+    $('.previous').on('click', () => {
+
+        $('.carousel-gifs').children().eq(currentIndex).css('display', 'none');
+
+        if (currentIndex > 0){
+            currentIndex--
+        } else {
+            currentIndex = highestIndex;
+        }
+
+        $('.carousel-gifs').children().eq(currentIndex).css('display', 'block');
+    })
+
 
 })
