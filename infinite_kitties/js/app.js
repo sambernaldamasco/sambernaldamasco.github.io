@@ -6,13 +6,19 @@ $(() => {
     const $gifsContainer = $('.carousel-gifs')
     let currentIndex = 0;
     let highestIndex = 0;
+
+
     $('.gifButton').on('click', (event) => {
-        $gifsContainer.empty();
+
         const randomIndex = Math.floor(Math.random() * 1000);
         const search = $(event.target).attr('id');
 
+        $('.carousel-button').css('display', 'block');
+
+        $gifsContainer.empty();
+
         $.ajax({
-            url:'https://api.giphy.com/v1/gifs/search?api_key=xj0u5sGZ4wDzUWFeai6BjNWSAuOIlmUk&q='+search+'&limit=5&offset='+randomIndex+'&rating=PG&lang=en'
+            url:'https://api.giphy.com/v1/gifs/search?api_key=xj0u5sGZ4wDzUWFeai6BjNWSAuOIlmUk&q='+search+'&limit=100&offset='+randomIndex+'&rating=PG&lang=en'
             }).then(
             (data)=>{
 

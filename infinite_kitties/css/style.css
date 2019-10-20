@@ -1,8 +1,30 @@
-*{
+/* *{
     border: 1px solid gold;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 
 /* mobile styling */
+body{
+    margin: 0px;
+    background-color: #0E1B4E;
+
+}
+
+h1, p{
+    font-family: 'Dosis', sans-serif;
+}
+
+h1{
+    color: #B32126;
+}
+
+p{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #E3B505;
+}
+
 .carousel-gifs iframe{
     width: 100%;
     border-radius: 10px;
@@ -17,7 +39,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0E1B4E;
 }
+
+.gifButton{
+    background-color: #A4E2FF;
+    border: none;
+    height: 70px;
+    width: 150px;
+    font-size: 1em;
+    border-radius: 12px;
+}
+
 
 .carousel-container{
     width: 90%;
@@ -27,6 +60,19 @@
     align-items: center;
 }
 
+.carousel-button{
+    display: none;
+}
+
+.next, .previous{
+    background-color: #E3B505;
+    color: white;
+    border-radius: 60%;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border: none;
+}
 
 /* desktop styling */
 @media (min-width: 600px) {
@@ -48,6 +94,7 @@
         padding: 10px;
         border-radius: 10px;
         box-sizing: border-box;
+        background-color: #0E1B4E;
     }
 
 
@@ -62,6 +109,14 @@
         display: block;
     }
 
+    h1, p{
+        font-family: 'Dosis', sans-serif;
+    }
+
+    p{
+        font-size: 1em;
+        font-weight: bold;
+    }
 
 }
 
