@@ -17,6 +17,8 @@ h1, p{
 
 h1{
     color: #B32126;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 p{
@@ -40,6 +42,7 @@ p{
     flex-direction: column;
     align-items: center;
     background-color: #0E1B4E;
+    flex-grow: 1;
 }
 
 .gifButton{
