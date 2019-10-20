@@ -26,7 +26,7 @@ $(() => {
                 // console.log(data.data[0]);
                 // console.log(data.data[0].images);
                 // console.log(data.data[0].images.original);
-                for(let i = 0; i < 5; i++){
+                for(let i = 0; i < 100; i++){
                     const $gif = $('<iframe>').attr('frameBorder', '0');
                     console.log(data.data[i].embed_url);
                     const $url = data.data[i].embed_url;
