@@ -75,6 +75,9 @@ $(() => {
             const randomIndex = Math.floor(Math.random() * 1000);
             const search = $(event.target).attr('id');
 
+            currentIndex = 0;
+            highestIndex = 0;
+
             $('.carousel-button').css('display', 'block');
 
             $gifsContainer.empty();
